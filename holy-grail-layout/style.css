@@ -1,0 +1,123 @@
+ul, li{
+    list-style: none;
+    padding: 0;
+}
+
+.grid-container{
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+header{
+    grid-column: span 3;
+    text-align: center;
+    border-bottom: solid 1px #ddd;
+}
+
+nav{
+    text-align: left;
+    border-right: solid 1px #ddd;
+}
+nav > h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+    
+}
+nav > ul > li{
+    text-decoration: underline;
+    padding: 2px 0;
+    color: blue;
+    cursor: pointer;
+}
+
+article{
+    padding: 20px 10px 10px 0;
+    
+
+}
+article h1{
+    width: 90%;
+    font-size: 2rem;
+    margin: auto;
+    padding-bottom: 20px;
+}
+article .image-container{
+    width: 90%;
+    margin: auto;
+}
+article img{
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+}
+article p{
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    color: #777;
+}
+
+aside{
+    text-align: center;
+    border-left: solid 1px #ddd;
+}
+aside ul li:nth-child(2) , aside ul li:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-column: span 3;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px #ddd;
+}
+
+
+/* !Mark : Responsive */
+
+@media screen and (max-width:900px){
+    nav{
+        grid-column: span 3;
+        border-right: none;
+        border-bottom: solid 1px #ddd;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    article {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:750px){
+    aside {
+        grid-column: span 3;
+        border-left: none;
+        padding: 10px;
+    }
+    aside li{
+        display: inline-block;
+    }
+    aside ul li:nth-child(2) , aside ul li:nth-child(4) {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    article{
+        grid-column: span 3;
+        border-bottom: solid 1px #ddd;
+    }
+
+    nav ul li {
+        padding-right: 5px;
+    }
+}
